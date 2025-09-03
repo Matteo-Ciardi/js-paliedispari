@@ -4,18 +4,22 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione)
 // Dichiariamo chi ha vinto.
 
+// L'utente scegie "Pari o dispari"
 const oddOrEven = prompt("Scegli pari o dispari").toLowerCase();
+
+// L'utente sceglie un numero da 1 a 5
 const userInput = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
 console.log("Scelta utente: " + oddOrEven);
 console.log("Numero scelto dall'utente: " + userInput);
 
+// Funzione per generare un numero random da 1 a 5 compresi
 const min = 1;
 const max = 5;
 
 function randomGenerator(min, max) {
-    const minCeiled = Math.ceil(1);
-    const maxFloored = Math.floor(5);
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
 
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
@@ -26,6 +30,7 @@ console.log("Numero scelto dal PC: " + generatedNumber);
 let sumResult = userInput + generatedNumber;
 console.log("Risultato della somma dei due valori: " + sumResult);
 
+// Funzione per controllare se il numero è pari o dispari
 function checkOddEven(sumResult) {
     let result;
 
@@ -43,6 +48,7 @@ function checkOddEven(sumResult) {
 let resultFunction = checkOddEven(sumResult);
 console.log("La somma è: " + resultFunction);
 
+// Confronto del risultato
 if (resultFunction === oddOrEven) {
     console.log("Complimenti! Hai vinto!")
 }

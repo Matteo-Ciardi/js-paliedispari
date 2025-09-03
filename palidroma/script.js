@@ -1,11 +1,13 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
+// Utente inserisce la parola
 const userWord = prompt("Inserisci una parola")
 
+// Funzione per controllare se la parola è palindroma
 function checkPalindroma(userWord) {
     let revertedWord = userWord.split("").reverse().join("");
-
+    
     if (userWord.toLowerCase() === revertedWord.toLowerCase()) {
         return "E' palindroma";
     }
